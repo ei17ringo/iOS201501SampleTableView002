@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+{
+    NSArray *_coffeeArray; //メンバ変数宣言
+}
+
+@property (weak, nonatomic) IBOutlet UITableView *myTableView;
 
 
 @end
